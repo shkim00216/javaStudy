@@ -6,8 +6,8 @@ public class ExceptionExam3 {
 		int i = 10;
 		int j = 0; 
 		try {
-		int k = divide(i,j);
-		System.out.println(k);
+			int k = divide(i,j);
+			System.out.println(k);
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.toString());
 		}

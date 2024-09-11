@@ -6,7 +6,7 @@ public class BizExam {
 		BizService biz = new BizService();
 		biz.bizMethod(5); //오류없이 실행
 		try {
-		biz.bizMethod(-3);
+			biz.bizMethod(-3);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
