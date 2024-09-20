@@ -1,0 +1,36 @@
+package javaStudy.part13.exam06;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class CharIOExam02 {
+
+	public static void main(String[] args) {
+		BufferedReader br = null; 
+		PrintWriter pw = null;
+				
+		try {
+			br = new BufferedReader(new FileReader("src/javaStudy/part13/exam06/CharIOExam02.java")); //예외 처리
+			pw = new PrintWriter(new FileWriter("test.txt")); //filewriter 없이 printwriter만으로도 사용 가능
+			
+			String line = null;
+			
+			while ((line = br.readLine()) != null) {
+				pw.println(line);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pw.close();
+			try {
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
